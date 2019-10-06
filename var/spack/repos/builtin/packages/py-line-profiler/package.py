@@ -14,6 +14,9 @@ class PyLineProfiler(PythonPackage):
     homepage = "https://github.com/rkern/line_profiler"
     url      = "https://pypi.io/packages/source/l/line_profiler/line_profiler-2.0.tar.gz"
 
+    # unfortunately no new release is available and 2.0 does not
+    # yet work with python?3.5?: so we use a current commit
+    version('2.new', git='git@github.com:rkern/line_profiler.git', commit='3cdc2fab6793802d31130b1af2705bddebf6f7fd')
     version('2.1.2', sha256='efa66e9e3045aa7cb1dd4bf0106e07dec9f80bc781a993fbaf8162a36c20af5c')
     version('2.0', sha256='739f8ad0e4bcd0cb82e99afc09e00a0351234f6b3f0b1f7f0090a8a2fbbf8381')
 
