@@ -75,28 +75,17 @@ class Bazel(Package):
                overrides everything.
             """
 
-            def __init__(self, name, command, jobs):
+            def __init__(self, name, command):
                 super(BazelExecutable, self).__init__(name)
                 self.bazel_command = command
-                self.jobs = jobs
 
             def __call__(self, *args, **kwargs):
                 disable = env_flag(SPACK_NO_PARALLEL_MAKE)
-                parallel = ((not disable) and kwargs.get('parallel',
-                                                         self.jobs > 1))
+                #parallel = ((not disable) and kwargs.get('parallel',
+                #                                         self.jobs > 1))
 
-                jobs = "--jobs=1"
-                if parallel:
-                    jobs = "--jobs=%d" % self.jobs
-
-                args = (self.bazel_command,) + (jobs,) + args
+                args = (self.bazel_command,) + args
 
                 return super(BazelExecutable, self).__call__(*args, **kwargs)
 
-        jobs = cpu_count()
-        dependent_module = inspect.getmodule(dependent_spec.package)
-        if not dependent_spec.package.parallel:
-            jobs = 1
-        elif dependent_module.make_jobs:
-            jobs = dependent_module.make_jobs
-        module.bazel = BazelExecutable('bazel', 'build', jobs)
+        module.bazel = BazelExecutable('bazel', 'build')
