@@ -3,11 +3,14 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-
 from spack import *
 
+
 class PyGooglePasta(PythonPackage):
-    """Python AST Augmentation - Enable python source code refactoring through AST modifications."""
+    """Python AST Augmentation
+
+    Enable python source code refactoring through AST modifications.
+    """
 
     homepage = "https://github.com/google/pasta"
     url      = "https://github.com/google/pasta/archive/v0.1.5.tar.gz"

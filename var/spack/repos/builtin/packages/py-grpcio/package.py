@@ -3,8 +3,8 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-
 from spack import *
+
 
 class PyGrpcio(PythonPackage):
     """Package for gRPC Python"""
@@ -14,16 +14,16 @@ class PyGrpcio(PythonPackage):
 
     version('1.16.0', 'f7793df1c31a89a89d18966790c740b4')
 
-    depends_on('cares',                    	type=('build', 'link', 'run'))
-    depends_on('zlib',               		type=('build', 'link', 'run'))
-    depends_on('openssl@1.0.2:',    		type=('build', 'link', 'run'))
-    depends_on('py-setuptools',     		type='build')
-    depends_on('py-six@1.10:',      		type=('build', 'run'))
-    depends_on('py-futures@2.2.0:', 		type=('build', 'run'))
-    depends_on('py-enum34@1.0.4:',  		type=('build', 'run'))
-    depends_on('py-sphinx@1.3:',    		type=('build', 'run'))
-    depends_on('py-sphinx-rtd-theme@0.1.8:', 	type=('build', 'run'))
-    depends_on('py-cython@0.23:',         	type=('build', 'run'))
+    depends_on('cares',             type=('build', 'link', 'run'))
+    depends_on('zlib',              type=('build', 'link', 'run'))
+    depends_on('openssl@1.0.2:',    type=('build', 'link', 'run'))
+    depends_on('py-setuptools',     type='build')
+    depends_on('py-six@1.10:',      type=('build', 'run'))
+    depends_on('py-futures@2.2.0:', type=('build', 'run'))
+    depends_on('py-enum34@1.0.4:',  type=('build', 'run'))
+    depends_on('py-sphinx@1.3:',    type=('build', 'run'))
+    depends_on('py-sphinx-rtd-theme@0.1.8:', type=('build', 'run'))
+    depends_on('py-cython@0.23:',   type=('build', 'run'))
 
     def setup_environment(self, spack_env, run_env):
         spack_env.set('GRPC_PYTHON_BUILD_WITH_CYTHON', '1')
