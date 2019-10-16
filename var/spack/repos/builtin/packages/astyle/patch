@@ -1,0 +1,16 @@
+commit 9f064ecd3c504ac153673ad671d82678fc233e58
+Author: Andreas Baumbach <healther.astro@gmail.com>
+Date:   Wed Oct 16 11:28:43 2019 +0200
+
+    patch generation
+
+diff --git a/README.md b/README.md
+index 98d8a6c..01754eb 100755
+--- a/README.md
++++ b/README.md
+@@ -7,3 +7,5 @@ The file **astyle.html**' contains information on using Artistic Style.
+ 
+ The files **news.html** and **notes.html** contain information on changes
+ made to the various releases.
++
++aaa
