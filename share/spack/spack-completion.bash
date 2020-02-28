@@ -651,7 +651,7 @@ _spack_config_revert() {
 }
 
 _spack_containerize() {
-    SPACK_COMPREPLY="-h --help"
+    SPACK_COMPREPLY="-h --help -f --file -r --recipefile"
 }
 
 _spack_create() {
