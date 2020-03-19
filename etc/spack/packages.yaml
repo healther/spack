@@ -1,0 +1,5 @@
+packages:
+    nest:
+        variants: [~mpi, ~optimize, ~openmpi]
+    ncurses:
+        variants: +termlib
