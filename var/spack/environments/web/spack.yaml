@@ -4,14 +4,16 @@
 # configuration settings.
 spack:
   # add package specs to the `specs` list
-  specs: 
-    - py-ics
-    - py-xlrd
-    - py-flask
+  specs:
+  - py-ics
+  - py-xlrd
+  - py-flask
   container:
     format: docker
     base:
-      image: "ubuntu:18.04"
-      spack: "develop"
+      image: ubuntu:18.04
+      spack: develop
     strip: true
+    singularity: {}
+    docker: {}
   view: true
