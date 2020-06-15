@@ -8,6 +8,7 @@ spack:
   - py-ics
   - py-xlrd
   - py-flask
+  - py-setuptools
   container:
     format: docker
     base:
@@ -17,3 +18,4 @@ spack:
     singularity: {}
     docker: {}
   view: true
+  concretization: together
