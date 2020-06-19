@@ -1,0 +1,20 @@
+# This is a Spack Environment file.
+#
+# It describes a set of packages to be installed, along with
+# configuration settings.
+spack:
+  # add package specs to the `specs` list
+  specs: [py-notebook ^python@3.7.4, py-numpy, py-scipy, nest, py-matplotlib, py-ipython,
+    py-line-profiler, py-memory-profiler, boost, yaml-cpp, ccache, py-pudb, htop,
+    py-virtualenv, py-sympy, py-scikit-optimize, py-scikit-learn, py-scikit-image,
+    py-requests, py-flake8, py-black, py-pandas, py-numba, py-tornado, py-ics, py-xlrd]
+  view: true
+  config: {}
+  mirrors: {}
+  modules:
+    enable: []
+  packages: {}
+  repos: []
+  upstreams: {}
+  definitions: []
+  concretization: together
