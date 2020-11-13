@@ -4,17 +4,18 @@
 # configuration settings.
 spack:
   # add package specs to the `specs` list
-  specs: [py-notebook ^python@3.7.4, py-numpy, py-scipy, nest~mpi~optimize~openmp,
-    py-matplotlib, py-ipython, py-line-profiler, py-memory-profiler, boost, yaml-cpp,
-    ccache, py-pudb, htop, py-virtualenv, py-sympy, py-scikit-optimize, py-scikit-learn,
-    py-scikit-image, py-requests, py-flake8, py-black, py-pandas, py-numba, py-tornado,
-    py-ics, py-xlrd, py-git-review, py-seaborn, openssh, py-pynn, py-sbs]
+  specs: [py-notebook, py-numpy, py-scipy, nest~mpi~optimize~openmp, py-matplotlib,
+    py-ipython, py-line-profiler, py-memory-profiler, boost, yaml-cpp, ccache, py-pudb,
+    htop, py-virtualenv, py-sympy, py-scikit-optimize, py-scikit-learn, py-scikit-image,
+    py-requests, py-flake8, py-black, py-pandas, py-numba, py-tornado, py-ics, py-xlrd,
+    py-git-review, py-seaborn, openssh, py-pynn, py-sbs]
   view: true
   config: {}
   mirrors: {}
   modules:
     enable: []
-  packages: {}
+  packages: {py-scikit-learn: {version: [], target: [], compiler: [], buildable: true,
+      providers: {}}}
   repos: []
   upstreams: {}
   definitions: []
