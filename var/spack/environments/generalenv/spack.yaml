@@ -4,9 +4,9 @@
 # configuration settings.
 spack:
   # add package specs to the `specs` list
-  specs: [py-notebook, py-numpy, py-scipy, nest~mpi~optimize~openmp, py-matplotlib,
-    py-ipython, py-line-profiler, py-memory-profiler, boost, yaml-cpp, ccache, py-pudb,
-    htop, py-virtualenv, py-sympy, py-scikit-optimize, py-scikit-learn, py-scikit-image,
+  specs: [py-notebook, py-numpy, py-scipy, nest~mpi~optimize, py-matplotlib, py-ipython,
+    py-line-profiler, py-memory-profiler, boost, yaml-cpp, ccache, py-pudb, htop,
+    py-virtualenv, py-sympy, py-scikit-optimize, py-scikit-learn, py-scikit-image,
     py-requests, py-flake8, py-black, py-pandas, py-numba, py-tornado, py-ics, py-xlrd,
     py-git-review, py-seaborn, openssh, py-pynn, py-sbs]
   view: true
@@ -15,8 +15,36 @@ spack:
   modules:
     enable: []
   packages: {py-scikit-learn: {version: [], target: [], compiler: [], buildable: true,
-      providers: {}}}
+      providers: {}}, all: {providers: {blas: [openblas], lapack: [openblas]}, version: [],
+      target: [], compiler: [], buildable: true}}
   repos: []
   upstreams: {}
   definitions: []
   concretization: together
+  compilers:
+  - compiler:
+      spec: apple-clang@12.0.0
+      paths:
+        cc: /usr/bin/clang
+        cxx: /usr/bin/clang++
+        f77: /Users/healther/Documents/git.nosync/spack/opt/spack/darwin-bigsurIntel-skylake/apple-clang-12.0.0/gcc-10.2.0-6jdglbiizrcoqeghowet3kz4kyhxbknb/bin/gfortran
+        fc: /Users/healther/Documents/git.nosync/spack/opt/spack/darwin-bigsurIntel-skylake/apple-clang-12.0.0/gcc-10.2.0-6jdglbiizrcoqeghowet3kz4kyhxbknb/bin/gfortran
+      flags: {}
+      operating_system: bigsurIntel
+      target: x86_64
+      modules: []
+      environment: {unset: []}
+      extra_rpaths: []
+  - compiler:
+      spec: apple-clang@12.0.0
+      paths:
+        cc: /usr/bin/clang
+        cxx: /usr/bin/clang++
+        f77: /Users/healther/Documents/git.nosync/spack/opt/spack/darwin-bigsur-skylake/apple-clang-12.0.0/gcc-10.2.0-ju6lixuv6yn3r7dxclcphbxvw3ypegau/bin/gfortran
+        fc: /Users/healther/Documents/git.nosync/spack/opt/spack/darwin-bigsur-skylake/apple-clang-12.0.0/gcc-10.2.0-ju6lixuv6yn3r7dxclcphbxvw3ypegau/bin/gfortran
+      flags: {}
+      operating_system: bigsur
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []

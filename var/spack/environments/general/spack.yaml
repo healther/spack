@@ -30,7 +30,7 @@ spack:
       operating_system: macos
       target: x86_64
       modules: []
-      environment: {}
+      environment: {unset: []}
       extra_rpaths: []
   - compiler:
       spec: clang@7.0.1
@@ -41,6 +41,19 @@ spack:
         fc:
       flags: {}
       operating_system: macos
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+  - compiler:
+      spec: apple-clang@12.0.0
+      paths:
+        cc: /usr/bin/clang
+        cxx: /usr/bin/clang++
+        f77:
+        fc:
+      flags: {}
+      operating_system: bigsurIntel
       target: x86_64
       modules: []
       environment: {}
